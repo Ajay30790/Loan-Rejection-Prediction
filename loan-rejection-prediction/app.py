@@ -1,7 +1,6 @@
 # app.py
 # ============================================================================
 # LOAN REJECTION PREDICTION & RISK ANALYTICS SYSTEM — ENHANCED
-# IIT Jammu - Internship Program | Week 5 Assignment
 # ============================================================================
 # Enhancements in this version:
 #   - Robust file/model loading (checks multiple paths, no silent crashes)
@@ -39,7 +38,7 @@ warnings.filterwarnings('ignore')
 # PAGE CONFIGURATION
 # ============================================================================
 st.set_page_config(
-    page_title="Loan Rejection Prediction - IIT Jammu",
+    page_title="Loan Rejection Prediction System",
     page_icon="🏦",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -78,7 +77,7 @@ MODEL_COMPARISON_IMG_CANDIDATES = ["model/visualizations/model_comparison.png"]
 ROC_CURVES_IMG_CANDIDATES = ["model/visualizations/roc_curves.png"]
 
 # ============================================================================
-# CUSTOM CSS WITH IIT JAMMU BRANDING
+# CUSTOM CSS
 # ============================================================================
 st.markdown("""
 <style>
@@ -87,18 +86,18 @@ st.markdown("""
         background: linear-gradient(135deg, #e8eaf6, #c5cae9, #e8eaf6);
         border-radius: 10px; margin-bottom: 2rem; border-bottom: 4px solid #1a237e;
     }
-    .iit-header {
+    .header-bar {
         background: linear-gradient(90deg, #1a237e, #283593, #1a237e);
         padding: 0.8rem; border-radius: 10px; margin-bottom: 1.5rem;
         text-align: center; color: white; font-weight: bold; font-size: 1rem;
         box-shadow: 0 2px 10px rgba(26, 35, 126, 0.3);
     }
-    .iit-header a {
+    .header-bar a {
         color: white; text-decoration: none; margin: 0 12px; padding: 4px 10px;
         border-radius: 5px; transition: background-color 0.3s; font-size: 0.9rem;
     }
-    .iit-header a:hover { background-color: rgba(255, 255, 255, 0.2); text-decoration: none; }
-    .iit-header .separator { color: rgba(255,255,255,0.3); margin: 0 8px; }
+    .header-bar a:hover { background-color: rgba(255, 255, 255, 0.2); text-decoration: none; }
+    .header-bar .separator { color: rgba(255,255,255,0.3); margin: 0 8px; }
     .metric-card {
         background: white; padding: 1.2rem; border-radius: 10px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;
@@ -119,7 +118,7 @@ st.markdown("""
     .footer a { color: #1a237e; text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
     .sidebar-logo { text-align: center; padding: 0.5rem 0 1rem 0; }
-    .sidebar-logo img { max-width: 70px; }
+    .sidebar-logo img { max-width: 60px; }
     .sidebar-title { color: #1a237e; font-size: 1.2rem; font-weight: bold; margin: 0; }
     .sidebar-subtitle { color: #666; font-size: 0.8rem; margin: 0; }
     .content-card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); margin-bottom: 1rem; }
@@ -400,11 +399,11 @@ with st.sidebar:
     st.markdown("""
     <div class="sidebar-logo">
         <img src="https://img.icons8.com/color/96/000000/university.png" style="width: 60px;">
-        <p class="sidebar-title">IIT Jammu</p>
-        <p class="sidebar-subtitle">Internship Program</p>
+        <p class="sidebar-title">Loan Rejection Predictor</p>
+        <p class="sidebar-subtitle">Risk Analytics System</p>
         <hr style="margin: 10px 0;">
-        <p style="font-size: 0.8rem; color: #1a237e; font-weight: bold;">📌 Week 5 Assignment</p>
-        <p style="font-size: 0.8rem; color: #666;">Loan Rejection Prediction</p>
+        <p style="font-size: 0.8rem; color: #1a237e; font-weight: bold;">📌 Advanced Analytics</p>
+        <p style="font-size: 0.8rem; color: #666;">Predictive Modeling & XAI</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -452,16 +451,11 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("""
     <div style="font-size: 0.8rem; color: #666; text-align: center;">
-        <p style="margin: 0;">🏛️ IIT Jammu</p>
-        <p style="margin: 0;">📧 Asdharupur1@gmail.com</p>
-        <p style="margin: 0;">📅 Week 5 | 2024</p>
+        <p style="margin: 0;">🏛️ Loan Analytics System</p>
         <hr style="margin: 10px 0;">
         <div class="social-icons">
-            <a href="https://github.com/asdharupur1-boop" target="_blank"><img src="https://img.icons8.com/ios-glyphs/25/000000/github.png" style="width: 22px;"></a>
-            <a href="https://www.linkedin.com/in/ayush-shukla-ds/" target="_blank"><img src="https://img.icons8.com/ios-glyphs/25/000000/linkedin.png" style="width: 22px;"></a>
-            <a href="https://www.iitjammu.ac.in" target="_blank"><img src="https://img.icons8.com/color/25/000000/university.png" style="width: 22px;"></a>
+            <a href="https://github.com/Ajay30790" target="_blank"><img src="https://img.icons8.com/ios-glyphs/25/000000/github.png" style="width: 22px;"></a>
         </div>
-        <p style="margin-top: 10px; font-size: 0.7rem; color: #999;">Built by Ayush Shukla | IIT Jammu</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -469,16 +463,14 @@ with st.sidebar:
 # HEADER
 # ============================================================================
 st.markdown("""
-<div class="iit-header">
-    <span>🏛️ IIT Jammu - Internship Program</span>
+<div class="header-bar">
+    <span>🏛️ Loan Rejection Prediction & Risk Analytics</span>
     <span class="separator">|</span>
-    <span>📊 Week 5 Assignment</span>
+    <span>📊 Advanced Analytics</span>
     <span class="separator">|</span>
-    <span>🤖 Loan Rejection Prediction</span>
+    <span>🤖 Machine Learning</span>
     <span class="separator">|</span>
-    <a href="https://github.com/asdharupur1-boop" target="_blank">🐙 GitHub</a>
-    <a href="https://www.linkedin.com/in/ayush-shukla-ds/" target="_blank">🔗 LinkedIn</a>
-    <a href="https://www.iitjammu.ac.in" target="_blank">🏛️ IIT Jammu</a>
+    <a href="https://github.com/Ajay30790" target="_blank">🐙 GitHub</a>
 </div>
 """, unsafe_allow_html=True)
 
@@ -663,701 +655,3 @@ elif page == "📈 Risk Analytics":
     st.markdown("---")
 
     if data is not None:
-        st.markdown("### 🎯 Risk Overview")
-        col1, col2, col3, col4 = st.columns(4)
-
-        with col1:
-            high_dti = (data['DEBT2INC'] > 0.4).mean() * 100
-            rr = data[data['DEBT2INC_RISK'] == 1]['LOAN_REJECTED'].mean() * 100 if (data['DEBT2INC_RISK'] == 1).any() else 0
-            st.metric("📊 High DTI (>0.4)", f"{high_dti:.1f}%", delta=f"{rr:.1f}% rejection")
-        with col2:
-            high_lev = (data['LEVRATIO'] > 0.5).mean() * 100
-            rr = data[data['LEVRATIO_RISK'] == 1]['LOAN_REJECTED'].mean() * 100 if (data['LEVRATIO_RISK'] == 1).any() else 0
-            st.metric("📊 High Leverage (>0.5)", f"{high_lev:.1f}%", delta=f"{rr:.1f}% rejection")
-        with col3:
-            low_savings = (data['SAVED'] == 0).mean() * 100
-            rr = data[data['LOW_SAVINGS'] == 1]['LOAN_REJECTED'].mean() * 100 if (data['LOW_SAVINGS'] == 1).any() else 0
-            st.metric("📊 Low/No Savings", f"{low_savings:.1f}%", delta=f"{rr:.1f}% rejection")
-        with col4:
-            no_emerg = (data['EMERGSAV'] == 0).mean() * 100
-            rr = data[data['NO_EMERGENCY_SAV'] == 1]['LOAN_REJECTED'].mean() * 100 if (data['NO_EMERGENCY_SAV'] == 1).any() else 0
-            st.metric("📊 No Emergency Savings", f"{no_emerg:.1f}%", delta=f"{rr:.1f}% rejection")
-
-        st.markdown("---")
-        st.markdown("### 🔗 Risk Indicator Correlation Matrix")
-        risk_cols = ['DEBT2INC', 'LEVRATIO', 'LOAN_REJECTED', 'DEBT2INC_RISK', 'LEVRATIO_RISK', 'LOW_SAVINGS', 'NO_EMERGENCY_SAV']
-        risk_cols_available = [c for c in risk_cols if c in data.columns]
-        corr_matrix = data[risk_cols_available].corr()
-        fig = px.imshow(corr_matrix, text_auto=True, aspect="auto", color_continuous_scale='RdBu_r',
-                         title="Correlation Matrix of Risk Indicators", height=500)
-        st.plotly_chart(fig, use_container_width=True)
-
-        st.markdown("### 📊 Risk Distribution Analysis")
-        col1, col2 = st.columns(2)
-        with col1:
-            fig = px.pie(data, names='LOAN_REJECTED', title='Loan Rejection Distribution',
-                         color_discrete_sequence=['#2ecc71', '#e74c3c'], hole=0.3, height=400)
-            fig.update_traces(textposition='inside', textinfo='percent+label')
-            st.plotly_chart(fig, use_container_width=True)
-        with col2:
-            fig = px.histogram(data, x='DEBT2INC', color='LOAN_REJECTED', title='Debt-to-Income Ratio Distribution',
-                                labels={'DEBT2INC': 'Debt-to-Income Ratio', 'count': 'Count'},
-                                color_discrete_map={0: '#2ecc71', 1: '#e74c3c'}, nbins=50, height=400)
-            st.plotly_chart(fig, use_container_width=True)
-
-        st.markdown("### 📈 Advanced Risk Analytics")
-        col1, col2 = st.columns(2)
-        with col1:
-            if 'INCOME' in data.columns:
-                fig = px.box(data, x='LOAN_REJECTED', y='INCOME', title='Income Distribution by Loan Status',
-                             labels={'LOAN_REJECTED': 'Loan Rejected', 'INCOME': 'Income (₹)'},
-                             color='LOAN_REJECTED', color_discrete_map={0: '#2ecc71', 1: '#e74c3c'}, height=400)
-                st.plotly_chart(fig, use_container_width=True)
-        with col2:
-            if 'NETWORTH' in data.columns:
-                fig = px.box(data, x='LOAN_REJECTED', y='NETWORTH', title='Net Worth Distribution by Loan Status',
-                             labels={'LOAN_REJECTED': 'Loan Rejected', 'NETWORTH': 'Net Worth (₹)'},
-                             color='LOAN_REJECTED', color_discrete_map={0: '#2ecc71', 1: '#e74c3c'}, height=400)
-                st.plotly_chart(fig, use_container_width=True)
-
-        st.markdown("### 🎯 Composite Risk Score Distribution")
-        fig = px.histogram(data, x='RISK_SCORE', color='LOAN_REJECTED', title='Composite Risk Score Distribution',
-                            labels={'RISK_SCORE': 'Risk Score', 'count': 'Count'},
-                            color_discrete_map={0: '#2ecc71', 1: '#e74c3c'}, barmode='stack', height=400)
-        st.plotly_chart(fig, use_container_width=True)
-
-        st.markdown("### 📊 Risk Score Breakdown")
-        risk_summary = data.groupby('RISK_SCORE').agg({'LOAN_REJECTED': ['count', 'mean']}).reset_index()
-        risk_summary.columns = ['Risk Score', 'Count', 'Rejection Rate']
-        risk_summary['Rejection Rate'] = risk_summary['Rejection Rate'] * 100
-        risk_summary['Risk Level'] = risk_summary['Risk Score'].apply(
-            lambda x: 'High' if x >= 4 else 'Medium' if x >= 2 else 'Low'
-        )
-        st.dataframe(risk_summary, use_container_width=True)
-    else:
-        st.info("No dataset loaded yet — go to Dashboard or Dataset Overview to upload one.")
-
-# ============================================================================
-# PAGE 4: MODEL PERFORMANCE
-# ============================================================================
-elif page == "🤖 Model Performance":
-    st.markdown("### 🤖 Model Performance Analysis")
-    st.markdown("---")
-
-    if model_data is None:
-        err = st.session_state.get("_model_load_error")
-        st.warning("⚠️ No trained model found at `model/loan_rejection_model.pkl`.")
-        if err:
-            st.caption(f"Last load error: {err}")
-        st.info("Train a model and save it there, or upload one below.")
-        uploaded_model = st.file_uploader("Upload model .pkl", type=["pkl"], key="model_upload")
-        if uploaded_model is not None:
-            try:
-                model_data = pickle.load(uploaded_model)
-                st.success("✅ Model loaded from upload for this session.")
-            except Exception as e:
-                st.error(f"❌ Couldn't load uploaded model: {e}")
-
-    if model_data is not None and data is not None:
-        st.markdown("### 📊 Model Information")
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("🏆 Best Model", model_data.get('model_name', 'N/A'))
-        with col2:
-            performance = model_data.get('performance', {})
-            st.metric("📈 ROC-AUC Score", f"{performance.get('roc_auc', 0):.4f}")
-        with col3:
-            st.metric("🎯 Accuracy", f"{performance.get('accuracy', 0):.4f}")
-
-        st.markdown("---")
-        st.markdown("### 🔍 Feature Importance Analysis (Global XAI)")
-        fi_path = find_first_existing(FEATURE_IMPORTANCE_CANDIDATES)
-        feature_importance = None
-        importance_source = None
-        if fi_path:
-            try:
-                feature_importance = pd.read_csv(fi_path)
-                importance_source = "pre-computed file"
-            except Exception as e:
-                st.warning(f"⚠️ Couldn't read feature importance file: {e}")
-
-        if feature_importance is None and 'model' in model_data:
-            try:
-                model = model_data['model']
-                scaler = model_data['scaler']
-                feat_names = model_data.get('feature_names', [])
-                if feat_names:
-                    with st.spinner("Computing feature importance..."):
-                        feature_importance, importance_source = get_global_feature_importance(
-                            model, scaler, feat_names, data
-                        )
-            except Exception as e:
-                st.warning(f"⚠️ Couldn't compute feature importance: {e}")
-
-        if feature_importance is not None:
-            st.caption(f"Source: {importance_source}")
-            fig = px.bar(feature_importance.head(15), x='Importance', y='Feature',
-                         title='Top 15 Most Important Features', orientation='h',
-                         color='Importance', color_continuous_scale='Viridis', height=500)
-            fig.update_layout(yaxis={'categoryorder': 'total ascending'})
-            st.plotly_chart(fig, use_container_width=True)
-        else:
-            st.warning("⚠️ Feature importance not available (no file found, and the fallback methods failed).")
-
-
-        st.markdown("### 📈 Model Performance Metrics")
-        col1, col2 = st.columns(2)
-        with col1:
-            metrics = ['Accuracy', 'Precision', 'Recall', 'F1-Score', 'ROC-AUC']
-            values = [performance.get('accuracy', 0), performance.get('precision', 0),
-                      performance.get('recall', 0), performance.get('f1', 0),
-                      performance.get('roc_auc', 0)]
-            fig = px.bar(x=metrics, y=values, title='Performance Metrics',
-                         labels={'x': 'Metric', 'y': 'Score'}, color=values,
-                         color_continuous_scale='Blues', range_y=[0, 1], height=400)
-            fig.update_traces(texttemplate='%{y:.3f}', textposition='outside')
-            st.plotly_chart(fig, use_container_width=True)
-
-        with col2:
-            st.markdown("### 📊 Confusion Matrix")
-            cm_img = find_first_existing(CONFUSION_MATRIX_IMG_CANDIDATES)
-            if cm_img:
-                st.image(cm_img, use_container_width=True)
-            else:
-                # Compute one live instead of just warning
-                try:
-                    model = model_data['model']
-                    scaler = model_data['scaler']
-                    features = model_data['feature_names']
-                    available_feat = [f for f in features if f in data.columns]
-                    X = data[available_feat].fillna(0)
-                    X_scaled = scaler.transform(X)
-                    y_pred = model.predict(X_scaled)
-                    cm = confusion_matrix(data['LOAN_REJECTED'], y_pred)
-                    fig_cm = px.imshow(cm, text_auto=True, color_continuous_scale='Blues',
-                                       labels=dict(x="Predicted", y="Actual"),
-                                       x=['Approved', 'Rejected'], y=['Approved', 'Rejected'],
-                                       title="Confusion Matrix (computed live)")
-                    st.plotly_chart(fig_cm, use_container_width=True)
-                except Exception as e:
-                    st.warning(f"⚠️ Couldn't compute a confusion matrix: {e}")
-
-        st.markdown("### 📊 Model Comparison")
-        mc_img = find_first_existing(MODEL_COMPARISON_IMG_CANDIDATES)
-        if mc_img:
-            st.image(mc_img, use_container_width=True)
-        else:
-            st.info("ℹ️ No pre-rendered model comparison image found.")
-
-        st.markdown("### 📈 ROC Curve")
-        roc_img = find_first_existing(ROC_CURVES_IMG_CANDIDATES)
-        if roc_img:
-            st.image(roc_img, use_container_width=True)
-        else:
-            try:
-                model = model_data['model']
-                scaler = model_data['scaler']
-                features = model_data['feature_names']
-                available_feat = [f for f in features if f in data.columns]
-                X = data[available_feat].fillna(0)
-                X_scaled = scaler.transform(X)
-                y_proba = model.predict_proba(X_scaled)[:, 1]
-                fpr, tpr, _ = roc_curve(data['LOAN_REJECTED'], y_proba)
-                roc_auc_val = auc(fpr, tpr)
-                fig_roc = go.Figure()
-                fig_roc.add_trace(go.Scatter(x=fpr, y=tpr, mode='lines', name=f'ROC (AUC = {roc_auc_val:.3f})'))
-                fig_roc.add_trace(go.Scatter(x=[0, 1], y=[0, 1], mode='lines', name='Random', line=dict(dash='dash')))
-                fig_roc.update_layout(title="ROC Curve (computed live)", xaxis_title="False Positive Rate",
-                                       yaxis_title="True Positive Rate", height=450)
-                st.plotly_chart(fig_roc, use_container_width=True)
-            except Exception as e:
-                st.info(f"ℹ️ No ROC image found and couldn't compute one live: {e}")
-
-        st.markdown("### 📋 Detailed Classification Report")
-        try:
-            model = model_data['model']
-            scaler = model_data['scaler']
-            features = model_data['feature_names']
-            available_feat = [f for f in features if f in data.columns]
-            X = data[available_feat].fillna(0)
-            X_scaled = scaler.transform(X)
-            y_pred = model.predict(X_scaled)
-            report = classification_report(data['LOAN_REJECTED'], y_pred, output_dict=True)
-            report_df = pd.DataFrame(report).transpose()
-            st.dataframe(report_df.round(4), use_container_width=True)
-        except Exception as e:
-            st.warning(f"⚠️ Unable to generate classification report: {str(e)}")
-    elif model_data is not None and data is None:
-        st.info("Model is loaded, but no dataset is available to evaluate it against.")
-
-# ============================================================================
-# PAGE 5: PREDICT LOAN STATUS (single applicant)
-# ============================================================================
-elif page == "🎯 Predict Loan Status":
-    st.markdown("### 🎯 Predict Loan Rejection Status")
-    st.markdown("---")
-
-    if model_data is None:
-        st.warning("⚠️ No model loaded. Go to **Model Performance** to upload one, or add it to `model/loan_rejection_model.pkl`.")
-    else:
-        st.info("💡 Enter the applicant's financial information to predict loan rejection risk")
-        col1, col2, col3 = st.columns(3)
-
-        with col1:
-            st.markdown("#### 👤 Personal Information")
-            age = st.slider("Age", 18, 100, 35, key="age")
-            education = st.selectbox("Education Level", options=[1, 2, 3, 4, 5],
-                format_func=lambda x: {1: "Less than High School", 2: "High School",
-                                        3: "Some College", 4: "Bachelor's", 5: "Advanced"}.get(x, str(x)), key="education")
-            married = st.selectbox("Marital Status", options=[1, 2],
-                format_func=lambda x: "Married" if x == 1 else "Not Married", key="married")
-            kids = st.selectbox("Has Children", options=[0, 1, 2, 3, 4, 5],
-                format_func=lambda x: f"{x} children", key="kids")
-
-        with col2:
-            st.markdown("#### 💰 Financial Information")
-            income = st.number_input("Annual Income (₹)", min_value=0, value=500000, step=10000, key="income")
-            debt = st.number_input("Total Debt (₹)", min_value=0, value=250000, step=10000, key="debt")
-            assets = st.number_input("Total Assets (₹)", min_value=0, value=1000000, step=50000, key="assets")
-            networth = st.number_input("Net Worth (₹)", min_value=0, value=500000, step=50000, key="networth")
-
-        with col3:
-            st.markdown("#### 📊 Risk Indicators")
-            savings = st.selectbox("Has Savings", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key="savings")
-            emergency_sav = st.selectbox("Has Emergency Savings", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key="emergency_sav")
-            credit_turn_down = st.selectbox("Previously Turned Down for Credit", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key="credit_turn_down")
-            late_payment = st.selectbox("Late on Payments (60+ days)", options=[0, 1], format_func=lambda x: "Yes" if x == 1 else "No", key="late_payment")
-
-        if income == 0:
-            st.warning("⚠️ Income is ₹0 — debt-to-income ratio will be undefined/treated as 0. Consider entering a realistic income.")
-        if assets == 0:
-            st.warning("⚠️ Assets are ₹0 — leverage ratio will be undefined/treated as 0.")
-
-        debt_to_income = debt / income if income > 0 else 0
-        leverage = debt / assets if assets > 0 else 0
-        high_dti = 1 if debt_to_income > 0.4 else 0
-        high_leverage = 1 if leverage > 0.5 else 0
-        low_savings = 1 if savings == 0 else 0
-        no_emergency_sav = 1 if emergency_sav == 0 else 0
-        risk_score = high_dti + high_leverage + low_savings + no_emergency_sav
-
-        features = {
-            'AGE': age, 'INCOME': income, 'DEBT': debt, 'ASSET': assets, 'NETWORTH': networth,
-            'EDUC': education, 'MARRIED': married, 'KIDS': kids, 'SAVED': savings,
-            'EMERGSAV': emergency_sav, 'TURNDOWN': credit_turn_down, 'LATE60': late_payment,
-            'DEBT2INC': debt_to_income, 'LEVRATIO': leverage, 'DEBT2INC_RISK': high_dti,
-            'LEVRATIO_RISK': high_leverage, 'LOW_SAVINGS': low_savings, 'NO_EMERGENCY_SAV': no_emergency_sav,
-        }
-        model_features = model_data['feature_names']
-        for feat in model_features:
-            if feat not in features:
-                features[feat] = 0
-
-        st.markdown("---")
-
-        if st.button("🔮 Predict Loan Rejection Risk", use_container_width=True, key="predict_button"):
-            try:
-                X_pred = pd.DataFrame([features])[model_features].fillna(0)
-                scaler = model_data['scaler']
-                model = model_data['model']
-                X_scaled = scaler.transform(X_pred)
-                prediction = model.predict(X_scaled)[0]
-                probability = model.predict_proba(X_scaled)[0][1]
-            except Exception as e:
-                st.error(f"❌ Prediction failed: {e}")
-                prediction, probability = None, None
-
-            if prediction is not None:
-                st.markdown("## 📊 Prediction Results")
-                st.markdown("---")
-                col1, col2, col3 = st.columns([1, 2, 1])
-                with col2:
-                    if prediction == 0:
-                        st.markdown(f"""
-                        <div class="result-approved">
-                            <div class="result-text" style="color: #2ecc71;">✅ Loan Approved</div>
-                            <div class="result-subtext">Rejection Probability: {(1 - probability) * 100:.1f}%</div>
-                            <span class="badge badge-success">Low Risk</span>
-                        </div>""", unsafe_allow_html=True)
-                    else:
-                        st.markdown(f"""
-                        <div class="result-rejected">
-                            <div class="result-text" style="color: #e74c3c;">❌ Loan Rejected</div>
-                            <div class="result-subtext">Rejection Probability: {probability * 100:.1f}%</div>
-                            <span class="badge badge-danger">High Risk</span>
-                        </div>""", unsafe_allow_html=True)
-
-                st.markdown("---")
-                st.markdown("## 🎯 Risk Assessment")
-                risk_factors = []
-                if high_dti: risk_factors.append(("High Debt-to-Income Ratio", "High"))
-                if high_leverage: risk_factors.append(("High Leverage Ratio", "High"))
-                if low_savings: risk_factors.append(("Low/No Savings", "Medium"))
-                if no_emergency_sav: risk_factors.append(("No Emergency Savings", "Medium"))
-                if late_payment: risk_factors.append(("Late Payments", "High"))
-                if credit_turn_down: risk_factors.append(("Previous Credit Denial", "High"))
-
-                if risk_factors:
-                    col1, col2 = st.columns(2)
-                    for i, (factor, level) in enumerate(risk_factors):
-                        with col1 if i % 2 == 0 else col2:
-                            level_class = "risk-high" if level == "High" else "risk-medium"
-                            st.markdown(f"<span class='{level_class}'>{level}</span> {factor}", unsafe_allow_html=True)
-                else:
-                    st.success("✅ No significant risk factors identified")
-
-                st.markdown("---")
-                st.markdown("## 💰 Financial Metrics")
-                col1, col2, col3 = st.columns(3)
-                with col1:
-                    dti_status = "🔴 High" if debt_to_income > 0.4 else "🟢 Acceptable"
-                    st.metric("Debt-to-Income Ratio", f"{debt_to_income:.3f}", delta=dti_status)
-                with col2:
-                    lev_status = "🔴 High" if leverage > 0.5 else "🟢 Acceptable"
-                    st.metric("Leverage Ratio", f"{leverage:.3f}", delta=lev_status)
-                with col3:
-                    risk_level = "🔴 High" if risk_score >= 3 else "🟡 Medium" if risk_score >= 2 else "🟢 Low"
-                    st.metric("Risk Score", f"{risk_score}/4", delta=risk_level)
-
-                st.markdown("### 📊 Risk Meter")
-                risk_percentage = (risk_score / 4) * 100
-                color = "high" if risk_percentage >= 75 else "medium" if risk_percentage >= 50 else "low"
-                st.markdown(f"""
-                <div class="risk-bar"><div class="risk-bar-fill {color}" style="width: {risk_percentage}%;"></div></div>
-                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #666;">
-                    <span>Low Risk</span><span>{risk_percentage:.0f}%</span><span>High Risk</span>
-                </div>""", unsafe_allow_html=True)
-
-                st.markdown("---")
-                st.markdown("## 🔍 Why This Prediction? (Explainable AI)")
-                if data is not None:
-                    try:
-                        with st.spinner("Computing explanation..."):
-                            _, contrib_df = explain_single_prediction(
-                                model, scaler, model_features, features, data, top_n=10
-                            )
-                        st.caption(
-                            "Each bar shows how much this applicant's actual value for that "
-                            "feature changed the rejection probability, compared to a typical "
-                            "applicant in the dataset. 🔴 Red = pushed toward rejection. "
-                            "🟢 Green = pushed toward approval."
-                        )
-                        fig_xai = plot_contribution_chart(contrib_df, title="Top factors driving this prediction")
-                        st.plotly_chart(fig_xai, use_container_width=True)
-
-                        with st.expander("📋 See exact values behind this explanation"):
-                            display_df = contrib_df[["Feature", "Applicant_Value", "Typical_Value", "Contribution"]].copy()
-                            display_df["Contribution (pp)"] = (display_df["Contribution"] * 100).round(2)
-                            display_df = display_df.drop(columns=["Contribution"])
-                            st.dataframe(display_df, use_container_width=True)
-
-                        st.download_button(
-                            "⬇️ Download Explanation (CSV)",
-                            contrib_df.to_csv(index=False).encode('utf-8'),
-                            file_name="prediction_explanation.csv"
-                        )
-                    except Exception as e:
-                        st.warning(f"⚠️ Couldn't generate an explanation: {e}")
-                else:
-                    st.info("ℹ️ Load a dataset (Dashboard or Dataset Overview) to enable explanations — they're computed by comparing this applicant against typical values in your data.")
-
-                # Save to session history
-                record = {
-                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                    "age": age, "income": income, "debt": debt, "assets": assets,
-                    "networth": networth, "debt_to_income": round(debt_to_income, 3),
-                    "leverage": round(leverage, 3), "risk_score": risk_score,
-                    "prediction": "Rejected" if prediction == 1 else "Approved",
-                    "rejection_probability": round(float(probability) * 100, 2)
-                }
-                st.session_state.prediction_history.append(record)
-
-                # Downloadable single report
-                report_text = io.StringIO()
-                report_text.write("LOAN REJECTION PREDICTION REPORT\n")
-                report_text.write("=" * 40 + "\n")
-                for k, v in record.items():
-                    report_text.write(f"{k}: {v}\n")
-                st.download_button("⬇️ Download This Report (TXT)", report_text.getvalue(),
-                                    file_name=f"loan_report_{record['timestamp'].replace(':', '-')}.txt")
-
-# ============================================================================
-# PAGE 6: BATCH PREDICTION (new)
-# ============================================================================
-elif page == "📥 Batch Prediction":
-    st.markdown("### 📥 Batch Prediction")
-    st.markdown("---")
-
-    if model_data is None:
-        st.warning("⚠️ No model loaded. Go to **Model Performance** to upload one first.")
-    else:
-        st.info(
-            "Upload a CSV where each row is an applicant. Missing columns required by the "
-            "model will be filled with 0 automatically."
-        )
-        model_features = model_data['feature_names']
-        st.caption(f"Model expects these features: {', '.join(model_features)}")
-
-        batch_file = st.file_uploader("Upload applicants CSV", type=["csv"], key="batch_upload")
-        if batch_file is not None:
-            try:
-                batch_df = pd.read_csv(batch_file)
-                st.markdown("#### Preview")
-                st.dataframe(batch_df.head(20), use_container_width=True)
-
-                if st.button("🔮 Run Batch Prediction", use_container_width=True):
-                    X_batch = batch_df.copy()
-                    for feat in model_features:
-                        if feat not in X_batch.columns:
-                            X_batch[feat] = 0
-                    X_batch = X_batch[model_features].fillna(0)
-
-                    scaler = model_data['scaler']
-                    model = model_data['model']
-                    X_scaled = scaler.transform(X_batch)
-                    preds = model.predict(X_scaled)
-                    probs = model.predict_proba(X_scaled)[:, 1]
-
-                    results = batch_df.copy()
-                    results['Predicted_Status'] = np.where(preds == 1, 'Rejected', 'Approved')
-                    results['Rejection_Probability_%'] = (probs * 100).round(2)
-
-                    # Persist so the row-level explanation picker below survives reruns
-                    st.session_state.batch_results = results
-                    st.session_state.batch_X = X_batch
-
-                if "batch_results" in st.session_state:
-                    results = st.session_state.batch_results
-                    X_batch = st.session_state.batch_X
-
-                    st.markdown("#### Results")
-                    st.dataframe(results, use_container_width=True)
-
-                    col1, col2, col3 = st.columns(3)
-                    with col1:
-                        st.metric("Total Applicants", f"{len(results):,}")
-                    with col2:
-                        n_rejected = int((results['Predicted_Status'] == 'Rejected').sum())
-                        st.metric("Predicted Rejections", f"{n_rejected:,}")
-                    with col3:
-                        st.metric("Predicted Rejection Rate", f"{(n_rejected/len(results)*100):.1f}%")
-
-                    fig = px.histogram(results, x='Rejection_Probability_%', nbins=30,
-                                        title="Distribution of Predicted Rejection Probability")
-                    st.plotly_chart(fig, use_container_width=True)
-
-                    st.download_button(
-                        "⬇️ Download Predictions (CSV)",
-                        results.to_csv(index=False).encode('utf-8'),
-                        "batch_predictions.csv", "text/csv"
-                    )
-
-                    st.markdown("---")
-                    st.markdown("### 🔍 Explain an Individual Applicant (XAI)")
-                    if data is not None:
-                        row_idx = st.selectbox(
-                            "Pick a row to explain",
-                            options=list(results.index),
-                            format_func=lambda i: f"Row {i} — {results.loc[i, 'Predicted_Status']} ({results.loc[i, 'Rejection_Probability_%']}%)",
-                            key="batch_explain_row"
-                        )
-                        if st.button("🔍 Explain This Applicant", key="explain_batch_row_btn"):
-                            try:
-                                scaler = model_data['scaler']
-                                model = model_data['model']
-                                input_dict = X_batch.loc[row_idx].to_dict()
-                                with st.spinner("Computing explanation..."):
-                                    _, contrib_df = explain_single_prediction(
-                                        model, scaler, model_features, input_dict, data, top_n=10
-                                    )
-                                st.caption(
-                                    "🔴 Red = pushed this applicant toward rejection. "
-                                    "🟢 Green = pushed toward approval, relative to a typical applicant."
-                                )
-                                fig_xai = plot_contribution_chart(contrib_df, title=f"Why row {row_idx} was predicted this way")
-                                st.plotly_chart(fig_xai, use_container_width=True)
-                            except Exception as e:
-                                st.warning(f"⚠️ Couldn't generate an explanation for this row: {e}")
-                    else:
-                        st.info("ℹ️ Load a dataset (Dashboard or Dataset Overview) to enable per-applicant explanations.")
-            except Exception as e:
-                st.error(f"❌ Error processing batch file: {e}")
-
-
-# ============================================================================
-# PAGE 7: PREDICTION HISTORY (new)
-# ============================================================================
-elif page == "🕑 Prediction History":
-    st.markdown("### 🕑 Prediction History (this session)")
-    st.markdown("---")
-
-    history = st.session_state.prediction_history
-    if not history:
-        st.info("No predictions made yet in this session. Go to **Predict Loan Status** to run one.")
-    else:
-        hist_df = pd.DataFrame(history)
-        st.dataframe(hist_df, use_container_width=True)
-
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.metric("Total Predictions", f"{len(hist_df):,}")
-        with col2:
-            n_rej = (hist_df['prediction'] == 'Rejected').sum()
-            st.metric("Predicted Rejections", f"{n_rej:,}")
-        with col3:
-            st.metric("Predicted Approvals", f"{len(hist_df) - n_rej:,}")
-
-        st.download_button(
-            "⬇️ Download Full History (CSV)",
-            hist_df.to_csv(index=False).encode('utf-8'),
-            "prediction_history.csv", "text/csv"
-        )
-
-        if st.button("🗑️ Clear History"):
-            st.session_state.prediction_history = []
-            st.rerun()
-
-# ============================================================================
-# PAGE 8: DOCUMENTATION
-# ============================================================================
-else:
-    st.markdown("### 📚 Documentation")
-    st.markdown("---")
-
-    st.markdown("""
-    ## 📖 Loan Rejection Prediction System
-
-    ### 🏛️ IIT Jammu - Internship Program
-    **Week 5 Assignment**
-
-    ### Overview
-    This application uses machine learning to predict loan rejection risk based on
-    financial data from the Survey of Consumer Finances (SCF) 2019 dataset.
-
-    ---
-
-    ### 🆕 What's new in this enhanced version
-    - **Robust loading**: the app checks several likely locations for the dataset and
-      model, and lets you upload either directly from the browser if they're missing,
-      instead of showing a blank page.
-    - **Batch Prediction**: score many applicants at once from an uploaded CSV.
-    - **Prediction History**: every single prediction made in your session is logged
-      and downloadable.
-    - **Live-computed fallbacks**: the Model Performance page computes a confusion
-      matrix and ROC curve on the fly if pre-rendered images aren't found.
-    - **Defensive column handling**: pages no longer crash if a column (e.g. `EDCL`)
-      is missing from the dataset — they just skip that chart with a note.
-
-    ---
-
-    ### 📊 Dataset
-    - **Source**: Survey of Consumer Finances (SCF) 2019
-    - **Records**: 23,000+ households
-    - **Features**: 200+ financial and demographic variables
-
-    ---
-
-    ### 🎯 Methodology
-
-    #### Target Variable Creation
-    `LOAN_REJECTED` is derived from multiple indicators:
-    - Credit application turned down (`TURNDOWN`)
-    - Fear of denial (`FEARDENIAL`)
-    - Bankruptcy in last 5 years (`BNKRUPLAST5`)
-    - Foreclosure in last 5 years (`FORECLLAST5`)
-    - 60+ days late on payments (`LATE60`)
-    - Payday loan usage (`HPAYDAY`)
-
-    #### Risk Indicators
-    - **High DTI**: Debt-to-Income ratio > 0.4
-    - **High Leverage**: Leverage ratio > 0.5
-    - **Low Savings**: No savings account
-    - **No Emergency Savings**: No emergency fund
-
-    ---
-
-    ### 🤖 Models Used
-    1. **Logistic Regression** — baseline model
-    2. **Random Forest** — ensemble learning, feature importance
-    3. **Gradient Boosting** — advanced ensemble
-
-    ---
-
-    ### 📁 Expected Project Structure
-    ```
-    loan-rejection-prediction/
-    ├── app.py
-    ├── requirements.txt
-    ├── README.md
-    ├── SCFP2019.csv                (or data/SCFP2019.csv)
-    ├── model/
-    │   ├── loan_rejection_model.pkl
-    │   ├── feature_importance.csv
-    │   └── visualizations/
-    │       ├── confusion_matrix.png
-    │       ├── model_comparison.png
-    │       └── roc_curves.png
-    └── notebooks/
-    ```
-    Both `SCFP2019.csv` and the model file are optional now in the sense that the
-    app won't crash without them — but you'll get more functionality by including them.
-
-    ---
-
-    ### 🚀 How to Use
-    1. Navigate to **Predict Loan Status** for a single applicant.
-    2. Or go to **Batch Prediction** to score a CSV of many applicants at once.
-    3. Check **Prediction History** any time to review or export past predictions.
-    4. Use **Model Performance** to inspect accuracy, ROC-AUC, and feature importance.
-
-    ---
-
-    ### 🛠️ Technical Stack
-    - **Frontend**: Streamlit
-    - **Backend**: Python, scikit-learn
-    - **Visualization**: Plotly
-    - **Data Processing**: Pandas, NumPy
-
-    ---
-
-    ### 📧 Contact
-    - **Developer**: Ayush Shukla
-    - **Email**: Asdharupur1@gmail.com
-    - **GitHub**: [github.com/asdharupur1-boop](https://github.com/asdharupur1-boop)
-    - **LinkedIn**: [linkedin.com/in/ayush-shukla-ds](https://www.linkedin.com/in/ayush-shukla-ds/)
-    """)
-
-st.markdown("---")
-col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    st.markdown("""
-    <div style="display: flex; justify-content: center; gap: 20px; padding: 10px;">
-        <a href="https://github.com/asdharupur1-boop" target="_blank" style="text-decoration: none;">
-            <button style="background: #24292e; color: white; border: none; padding: 10px 30px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem;">🐙 View on GitHub</button>
-        </a>
-        <a href="https://www.linkedin.com/in/ayush-shukla-ds/" target="_blank" style="text-decoration: none;">
-            <button style="background: #0a66c2; color: white; border: none; padding: 10px 30px; border-radius: 5px; font-weight: bold; cursor: pointer; font-size: 1rem;">🔗 Connect on LinkedIn</button>
-        </a>
-    </div>
-    """, unsafe_allow_html=True)
-
-# ============================================================================
-# FOOTER
-# ============================================================================
-st.markdown("""
-<div class="footer">
-<p>
-    🏛️ <strong>IIT Jammu</strong> - Internship Program | Week 5 Assignment | Loan Rejection Prediction
-    <br>
-    <a href="https://github.com/asdharupur1-boop" target="_blank">GitHub</a> •
-    <a href="https://www.linkedin.com/in/ayush-shukla-ds/" target="_blank">LinkedIn</a> •
-    <a href="https://www.iitjammu.ac.in" target="_blank">IIT Jammu</a>
-    <br>
-    <span style="font-size: 0.8rem; color: #999;">Built by Ayush Shukla | Made with ❤️ at IIT Jammu | © 2024 | Enhanced Edition</span>
-</p>
-</div>
-""", unsafe_allow_html=True)
-
-# ============================================================================
-# END OF APPLICATION
-# ============================================================================
