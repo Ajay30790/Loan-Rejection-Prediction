@@ -92,11 +92,6 @@ st.markdown("""
         text-align: center; color: white; font-weight: bold; font-size: 1rem;
         box-shadow: 0 2px 10px rgba(26, 35, 126, 0.3);
     }
-    .header-bar a {
-        color: white; text-decoration: none; margin: 0 12px; padding: 4px 10px;
-        border-radius: 5px; transition: background-color 0.3s; font-size: 0.9rem;
-    }
-    .header-bar a:hover { background-color: rgba(255, 255, 255, 0.2); text-decoration: none; }
     .header-bar .separator { color: rgba(255,255,255,0.3); margin: 0 8px; }
     .metric-card {
         background: white; padding: 1.2rem; border-radius: 10px;
@@ -131,9 +126,6 @@ st.markdown("""
     .result-rejected { background: linear-gradient(135deg, #fde8e8, #f8d7da); padding: 2rem; border-radius: 10px; text-align: center; border: 2px solid #e74c3c; }
     .result-text { font-size: 2rem; font-weight: bold; }
     .result-subtext { font-size: 1.1rem; margin-top: 0.5rem; }
-    .social-icons { display: flex; justify-content: center; gap: 15px; margin: 10px 0; }
-    .social-icons a { display: inline-block; transition: transform 0.3s; }
-    .social-icons a:hover { transform: scale(1.1); }
     .risk-bar { height: 8px; border-radius: 4px; background: #e9ecef; margin: 5px 0; overflow: hidden; }
     .risk-bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s; }
     .risk-bar-fill.high { background: #e74c3c; }
@@ -452,10 +444,6 @@ with st.sidebar:
     st.markdown("""
     <div style="font-size: 0.8rem; color: #666; text-align: center;">
         <p style="margin: 0;">🏛️ Loan Analytics System</p>
-        <hr style="margin: 10px 0;">
-        <div class="social-icons">
-            <a href="https://github.com/Ajay30790" target="_blank"><img src="https://img.icons8.com/ios-glyphs/25/000000/github.png" style="width: 22px;"></a>
-        </div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -469,8 +457,6 @@ st.markdown("""
     <span>📊 Advanced Analytics</span>
     <span class="separator">|</span>
     <span>🤖 Machine Learning</span>
-    <span class="separator">|</span>
-    <a href="https://github.com/Ajay30790" target="_blank">🐙 GitHub</a>
 </div>
 """, unsafe_allow_html=True)
 
@@ -1214,58 +1200,75 @@ else:
     st.markdown("### 📚 Documentation")
     st.markdown("---")
 
-    
-    ## 📖 Loan Rejection Prediction System
+    st.markdown("""
+## 📖 Loan Rejection Prediction System
 
-    ### Overview
-    This application uses machine learning to predict loan rejection risk based on
-    financial data from the Survey of Consumer Finances (SCF) 2019 dataset.
+### Overview
+This application uses machine learning to predict loan rejection risk based on
+financial data from the Survey of Consumer Finances (SCF) 2019 dataset.
 
-    ---
+---
 
-    ### 🆕 Key Features
-    - **Robust loading**: the app checks several likely locations for the dataset and
-      model, and lets you upload either directly from the browser if they're missing.
-    - **Batch Prediction**: score many applicants at once from an uploaded CSV.
-    - **Prediction History**: every single prediction made in your session is logged
-      and downloadable.
-    - **Live-computed fallbacks**: the Model Performance page computes a confusion
-      matrix and ROC curve on the fly if pre-rendered images aren't found.
-    - **Defensive column handling**: pages no longer crash if a column is missing.
+### 🆕 Key Features
+- **Robust loading**: the app checks several likely locations for the dataset and
+  model, and lets you upload either directly from the browser if they're missing.
+- **Batch Prediction**: score many applicants at once from an uploaded CSV.
+- **Prediction History**: every single prediction made in your session is logged
+  and downloadable.
+- **Live-computed fallbacks**: the Model Performance page computes a confusion
+  matrix and ROC curve on the fly if pre-rendered images aren't found.
+- **Defensive column handling**: pages no longer crash if a column is missing.
 
-    ---
+---
 
-    ### 📊 Dataset
-    - **Source**: Survey of Consumer Finances (SCF) 2019
-    - **Records**: 23,000+ households
-    - **Features**: 200+ financial and demographic variables
+### 📊 Dataset
+- **Source**: Survey of Consumer Finances (SCF) 2019
+- **Records**: 23,000+ households
+- **Features**: 200+ financial and demographic variables
 
-    ---
+---
 
-    ### 🎯 Methodology
+### 🎯 Methodology
 
-    #### Target Variable Creation
-    `LOAN_REJECTED` is derived from multiple indicators:
-    - Credit application turned down (`TURNDOWN`)
-    - Fear of denial (`FEARDENIAL`)
-    - Bankruptcy in last 5 years (`BNKRUPLAST5`)
-    - Foreclosure in last 5 years (`FORECLLAST5`)
-    - 60+ days late on payments (`LATE60`)
-    - Payday loan usage (`HPAYDAY`)
+#### Target Variable Creation
+`LOAN_REJECTED` is derived from multiple indicators:
+- Credit application turned down (`TURNDOWN`)
+- Fear of denial (`FEARDENIAL`)
+- Bankruptcy in last 5 years (`BNKRUPLAST5`)
+- Foreclosure in last 5 years (`FORECLLAST5`)
+- 60+ days late on payments (`LATE60`)
+- Payday loan usage (`HPAYDAY`)
 
-    #### Risk Indicators
-    - **High DTI**: Debt-to-Income ratio > 0.4
-    - **High Leverage**: Leverage ratio > 0.5
-    - **Low Savings**: No savings account
-    - **No Emergency Savings**: No emergency fund
+#### Risk Indicators
+- **High DTI**: Debt-to-Income ratio > 0.4
+- **High Leverage**: Leverage ratio > 0.5
+- **Low Savings**: No savings account
+- **No Emergency Savings**: No emergency fund
 
-    ---
+---
 
-    ### 🤖 Models Used
-    1. **Logistic Regression** — baseline model
-    2. **Random Forest** — ensemble learning, feature importance
-    3. **Gradient Boosting** — advanced ensemble
+### 🤖 Models Used
+1. **Logistic Regression** — baseline model
+2. **Random Forest** — ensemble learning, feature importance
+3. **Gradient Boosting** — advanced ensemble
 
-    ---
+---
 
-    ### 📁 Expected Project Structure
+### 📁 Expected Project Structure
+```
+project/
+├── app.py
+├── SCFP2019.csv                (or data/SCFP2019.csv, dataset/SCFP2019.csv)
+├── model/
+│   ├── loan_rejection_model.pkl
+│   ├── feature_importance.csv
+│   └── visualizations/
+│       ├── confusion_matrix.png
+│       ├── model_comparison.png
+│       └── roc_curves.png
+```
+
+If any of these files are missing, the app will still run — it will prompt you
+to upload the dataset/model manually, or compute charts (confusion matrix,
+ROC curve) live from the data and model instead of the pre-rendered images.
+""")
