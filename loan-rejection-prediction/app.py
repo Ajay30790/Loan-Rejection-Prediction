@@ -1214,7 +1214,7 @@ else:
     st.markdown("### 📚 Documentation")
     st.markdown("---")
 
-    st.markdown("""
+    
     ## 📖 Loan Rejection Prediction System
 
     ### Overview
